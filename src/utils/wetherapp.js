@@ -8,7 +8,8 @@ request({url,json:true},(error,{body})=>{
   }else if(body.error){
     callback("invalid location is passed!",undefined)
   }else{
-  callback(undefined,body.current.weather_descriptions+".  it is currently  "+body.current.temperature+"  degress out . it feels like  "+body.current.feelslike+"  degress out   "+body.current.precip+"  % of chance of rain")
+    
+  callback(undefined, body.current.weather_descriptions+".  it is currently  "+body.current.temperature+"  degress out . it feels like  "+body.current.feelslike+"  degress out   "+body.current.precip+"  % of chance of rain"+body.current.humidity+"humidity")
   }
 })
 
